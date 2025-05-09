@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <h2 class="text-center mb-4">About PhishGuard</h2>
+        <p>
+            PhishGuard is a web application designed to detect phishing URLs using advanced AI models, including Artificial Neural Networks (ANN), Convolutional Neural Networks (CNN), and Recurrent Neural Networks (RNN).
+        </p>
+        <p>
+            Our goal is to provide a user-friendly tool to help individuals and organizations identify malicious URLs and stay safe online. Enter a URL on the home page to scan it with all models, or use the individual model pages to test specific algorithms.
+        </p>
+    </div>
+
+    <!-- Team Section -->
+    <div class="team-section">
+        <h3>Meet Our Team</h3>
+        <div class="team-row">
+            <div class="team-card team-leader">
+                <h4>Sohair Shahen</h4>
+                <p>Team Leader</p>
+            </div>
+            <div class="team-card">
+                <h4>Semon Mokhles</h4>
+                <p>Member</p>
+            </div>
+            <div class="team-card">
+                <h4>Sama Ayman</h4>
+                <p>Member</p>
+            </div>
+            <div class="team-card">
+                <h4>Salma Hatem</h4>
+                <p>Member</p>
+            </div>
+            <div class="team-card">
+                <h4>Hesham Lotfe</h4>
+                <p>Member</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Team Section Styles */
+    .team-section {
+        margin-top: 50px;
+        padding: 20px;
+        background-color: rgba(30, 40, 50, 0.95);
+        border-radius: 15px;
+    }
+    .team-section h3 {
+        color: #ffffff;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .team-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .team-card {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: popUp 0.8s ease-out forwards;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .team-card:nth-child(1) { animation-delay: 0.2s; }
+    .team-card:nth-child(2) { animation-delay: 0.4s; }
+    .team-card:nth-child(3) { animation-delay: 0.6s; }
+    .team-card:nth-child(4) { animation-delay: 0.8s; }
+    .team-card:nth-child(5) { animation-delay: 1.0s; }
+    .team-card:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+    }
+    @keyframes popUp {
+        0% { opacity: 0; transform: translateY(30px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+    .team-card h4 {
+        color: #007bff;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    .team-card p {
+        color: #333;
+        font-size: 1rem;
+        margin: 0;
+    }
+    .team-leader {
+        border: 2px solid #007bff;
+    }
+</style>
+{% endblock %}
