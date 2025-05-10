@@ -1,0 +1,1 @@
+PhishGuard is a web application designed to detect phishing URLs using advanced AI models, including Artificial Neural Networks (ANN), Convolutional Neural Networks (CNN), and Recurrent Neural Networks (RNN). Our goal is to provide a user-friendly tool to help individuals and organizations identify malicious URLs and stay safe online.
